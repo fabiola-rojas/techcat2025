@@ -37,7 +37,7 @@ SELECT * FROM DB
 ```
 We can also do inline code fencing. For example, to import a module in Python you can use the `import` command.
 > [!TIP]
-> Helpful advice for doing thing better or more easily.
+> Helpful advice for doing things better or more easily.
 
 Just plain quote
 > This is a quote
