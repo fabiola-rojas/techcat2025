@@ -36,6 +36,16 @@
    - To process data in-memory before saving it locally, use `download_fileobj` or `get_object`, depending on your specific needs. 
         - `download_fileobj`: Stream directly into memory, working with large files, don't need metadata, pipe directly into another process.
         - `get_object`: Access to metadata, stream or inspect content manually, building logic dependent on object properties or headers.
-
-## Proposed End-to-End Architecture
+    
+## Boto3 Client API vs Resource API
+| **Client API** | **Resource API** |
+| -------------- | ---------------- |
+| - Direct, low-level API call.<br>- Control over request and response details.<br> | - High-level, object-oriented. <br>- Simple and more readable. |
+# Proposed End-to-End Architecture
 ![image](w6-s3-snowpipe.png)
+
+### Breaking It Down
+1. Read csv file from S3 or local using boto3.
+2. Upload file to S3 raw bucket using boto3.
+3. This triggers Lambda to transform to parquet and write to the public bucket.
+4. This creates an event notification that pipes the parquet file into a Snowflake table.
