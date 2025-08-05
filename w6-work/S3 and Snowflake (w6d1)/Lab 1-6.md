@@ -1,7 +1,4 @@
-# Lab 1: Research Activity 
-
-### Research Lab Activity: Understanding S3 Upload and Download Methods
-
+# Understanding S3 Upload and Download Methods
 
 **Objective**: Analyze and understand the differences between various methods of uploading and downloading files using the Boto3 library for AWS S3. Determine the appropriate use cases for each method.
 
@@ -39,3 +36,6 @@
    - To process data in-memory before saving it locally, use `download_fileobj` or `get_object`, depending on your specific needs. 
         - `download_fileobj`: Stream directly into memory, working with large files, don't need metadata, pipe directly into another process.
         - `get_object`: Access to metadata, stream or inspect content manually, building logic dependent on object properties or headers.
+
+## Proposed End-to-End Architecture
+![image](w6-s3-snowpipe.png)
