@@ -40,7 +40,7 @@
 ## Boto3 Client API vs Resource API
 | **Client API** | **Resource API** |
 | -------------- | ---------------- |
-| -Direct, low-level API call.<br>-Control over request and response details.<br> | -High-level, object-oriented. <br>-Simple and more readable. |
+| * Direct, low-level API call.<br>* Control over request and response details.<br> | -High-level, object-oriented. <br>-Simple and more readable. |
 # Proposed End-to-End Architecture
 ![image](w6-s3-snowpipe.png)
 
